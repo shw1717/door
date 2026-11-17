@@ -1,7 +1,7 @@
 import qrcode
 
 # 3단계에서 확인한 실제 주소로 바꾸세요 (끝의 / 포함)
-URL = "http://192.168.55.7:5500"
+URL = "http://shw1717.github.io/door/"
 
 qr = qrcode.QRCode(
     error_correction=qrcode.constants.ERROR_CORRECT_H,  # 오류 정정 높음
