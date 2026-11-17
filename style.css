@@ -59,6 +59,21 @@ body {
 .car-body   { fill: var(--door); stroke: #6f8fb8; stroke-width: 2; }
 .car-door   { fill: #2a4b78; stroke: #6f8fb8; stroke-width: 2; }
 .car-window { fill: #0d1c31; }
+
+/* 창문 유리: 올라갔다 내려갔다 반복 */
+.car-glass rect { fill: #8fb4e0; fill-opacity: 0.6; }
+.car-glint { stroke: #fff; stroke-opacity: 0.55; stroke-width: 3; stroke-linecap: round; fill: none; }
+
+.car-glass {
+  animation: window-slide 5s ease-in-out infinite;
+}
+
+/* 0~20%: 올라가 있음 → 20~45%: 내려감 → 45~65%: 내려가 있음 → 65~90%: 올라감 */
+@keyframes window-slide {
+  0%, 20%  { transform: translateY(0); }
+  45%, 65% { transform: translateY(22px); }
+  90%, 100% { transform: translateY(0); }
+}
 .car-wheel  { fill: #0d1c31; stroke: #6f8fb8; stroke-width: 2; }
 .car-hub    { fill: #6f8fb8; }
 .car-handle { fill: var(--light); }
@@ -353,5 +368,5 @@ footer {
 
 /* 모션 줄이기 설정을 켠 사용자 배려 */
 @media (prefers-reduced-motion: reduce) {
-  .car-seam { animation: none; }
+  .car-seam, .car-glass { animation: none; }
 }

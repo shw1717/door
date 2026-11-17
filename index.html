@@ -16,8 +16,20 @@
       <path class="car-body" d="M10 80 V64 Q10 57 18 55 L52 49 L76 27 Q80 22 88 22 H152 Q160 22 165 27 L190 51 L222 57 Q230 59 230 67 V80 Z"/>
       <!-- 문 패널 -->
       <path class="car-door" d="M78 26 H156 L162 42 V80 H78 Z"/>
-      <!-- 창문 -->
+      <!-- 창문 열린 부분 (유리가 내려가면 이 어두운 부분이 보임) -->
+      <defs>
+        <clipPath id="window-clip">
+          <path d="M86 32 H146 L154 50 H86 Z"/>
+        </clipPath>
+      </defs>
       <path class="car-window" d="M86 32 H146 L154 50 H86 Z"/>
+      <!-- 창문 유리: 위아래로 움직임 (창문 모양 밖은 잘려서 보이지 않음) -->
+      <g clip-path="url(#window-clip)">
+        <g class="car-glass">
+          <rect x="84" y="30" width="74" height="22"/>
+          <path d="M100 52 L116 30 M114 52 L130 30" class="car-glint"/>
+        </g>
+      </g>
       <!-- 문틈에서 새어 나오는 불빛 -->
       <path class="car-seam" d="M78 26 V80 M162 42 V80"/>
       <!-- 손잡이 -->
