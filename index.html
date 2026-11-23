@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>도어를알려도어</title>
   <meta name="description" content="도어를알려도어 - 졸업작품 소개 페이지">
+  <meta name="theme-color" content="#142843">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%AA%3C/text%3E%3C/svg%3E">
+
+  <!-- 링크 공유(카카오톡 등) 시 나오는 미리보기 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="도어를알려도어">
+  <meta property="og:description" content="자동차 도어의 구조와 전기 시스템을 배우는 이동식 교보재 소개 페이지">
+  <meta property="og:url" content="http://shw1717.github.io/door/">
+  <meta property="og:image" content="http://shw1717.github.io/door/images/hero.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,19 +54,41 @@
 
   <!-- 탭 메뉴 -->
   <nav class="tabs" role="tablist" aria-label="작품 설명 메뉴">
-    <button class="tab" role="tab" id="tab-overview"  data-target="overview"  aria-controls="overview"  aria-selected="true">개요</button>
-    <button class="tab" role="tab" id="tab-principle" data-target="principle" aria-controls="principle" aria-selected="false">작동원리</button>
-    <button class="tab" role="tab" id="tab-usage"     data-target="usage"     aria-controls="usage"     aria-selected="false">사용법</button>
+    <button class="tab" role="tab" id="tab-overview" data-target="overview" aria-controls="overview" aria-selected="true">개요</button>
+    <button class="tab" role="tab" id="tab-howto"    data-target="howto"    aria-controls="howto"    aria-selected="false">작동법</button>
+    <button class="tab" role="tab" id="tab-circuit"  data-target="circuit"  aria-controls="circuit"  aria-selected="false">회로도</button>
   </nav>
 
   <main>
     <!-- 개요 -->
     <section class="panel" id="overview" role="tabpanel" aria-labelledby="tab-overview">
       <h2>개요</h2>
+
+      <figure class="figure">
+        <img src="images/hero.jpg" alt="이동식 거치대에 도어를 장착해 완성한 교보재" width="1200" height="900">
+        <figcaption>완성된 도어 교보재</figcaption>
+      </figure>
+
       <h3>제작 동기</h3>
-      <p>도어의 구조 및 전기 시스템을 쉽게 이해 하기 위하여 제작 하였습니다.</p>
+      <p>도어의 구조 및 전기 시스템을 쉽게 이해하기 위하여 제작하였습니다.</p>
       <h3>무엇을 하는 작품인가요?</h3>
-      <p>윈도우 및 락 장치에 작동 회로 및 작동 시 소모 되는 전류를 측정 할 수 있는 이동식 교보재 입니다.</p>
+      <p>윈도우 및 락 장치의 작동 회로와, 작동 시 소모되는 전류를 측정할 수 있는 이동식 교보재입니다.</p>
+
+      <h3>제작 정보</h3>
+      <dl class="info">
+        <dt>프로젝트</dt><dd>융합프로젝트</dd>
+        <dt>제작 기간</dt><dd>총 30주 (2026)</dd>
+        <dt>제작 인원</dt><dd>8명</dd>
+      </dl>
+
+      <h3>구성</h3>
+      <dl class="info">
+        <dt>도어</dt><dd>폐차 자동차 조수석 도어</dd>
+        <dt>거치대</dt><dd>각관을 용접해 만든 프레임 + 캐스터 (이동식)</dd>
+        <dt>작동부</dt><dd>파워윈도우 모터, 도어락 액추에이터</dd>
+        <dt>제어</dt><dd>스위치 · 릴레이 회로, 제어 박스</dd>
+      </dl>
+
       <h3>조원 소개</h3>
       <!-- 총괄 -->
       <div class="lead">
@@ -81,7 +112,7 @@
           <h4><span class="num">02</span>도장 · 마감</h4>
           <ul class="members">
             <li><strong>신유성</strong><span>도장</span></li>
-            <li><strong>우용문</strong><span>도장 마감 · QR제작</span></li>
+            <li><strong>우용문</strong><span>도장 마감 · QR 작업</span></li>
             <li><strong>송민근</strong><span>판금 마감</span></li>
           </ul>
         </li>
@@ -101,9 +132,9 @@
       </ul>
     </section>
 
-    <!-- 작동원리 -->
-    <section class="panel" id="principle" role="tabpanel" aria-labelledby="tab-principle" hidden>
-      <h2>작동원리</h2>
+    <!-- 작동법 -->
+    <section class="panel" id="howto" role="tabpanel" aria-labelledby="tab-howto" hidden>
+      <h2>작동법</h2>
       <p>스위치를 누르면 모터에 걸리는 전원의 극성(+/-)이 바뀌어 모터의 회전 방향이 전환됩니다.</p>
 
       <!-- 회로도 2장: 누르면 원본 크기로 열림 -->
@@ -139,20 +170,30 @@
       </ul>
     </section>
 
-    <!-- 사용법 -->
-    <section class="panel" id="usage" role="tabpanel" aria-labelledby="tab-usage" hidden>
-      <h2>사용법</h2>
-      <ol class="steps">
-        <li><strong>TODO: 첫 번째 행동</strong><span>사용자가 가장 먼저 할 일을 적어주세요.</span></li>
-        <li><strong>TODO: 두 번째 행동</strong><span>다음에 할 일을 적어주세요.</span></li>
-        <li><strong>TODO: 세 번째 행동</strong><span>결과를 확인하는 방법을 적어주세요.</span></li>
-      </ol>
-      <p class="note">TODO: 사용 시 주의할 점이 있다면 여기에 적어주세요.</p>
+    <!-- 회로도 -->
+    <section class="panel" id="circuit" role="tabpanel" aria-labelledby="tab-circuit" hidden>
+      <h2>회로도</h2>
+
+      <!-- 회로도 2장: 누르면 원본 크기로 열림 -->
+      <figure class="figure">
+        <a href="images/1.jpg" target="_blank" rel="noopener">
+          <img src="images/1.jpg" alt="우측 앞 파워윈도우 스위치와 모터 회로도" loading="lazy">
+        </a>
+        <figcaption>우측 앞 파워윈도우 스위치 · 모터 회로</figcaption>
+      </figure>
+
+      <figure class="figure">
+        <a href="images/2.jpg" target="_blank" rel="noopener">
+          <img src="images/2.jpg" alt="릴레이 2개를 이용한 극성 전환 회로도" loading="lazy">
+        </a>
+        <figcaption>도어락 액추에이터 작동 회로</figcaption>
+      </figure>
+      <p class="hint">이미지를 누르면 크게 볼 수 있어요.</p>
     </section>
   </main>
 
   <footer>
-    <p>도어를알려도어 · 졸업작품전시회</p>
+    <p>도어를알려도어</p>
   </footer>
 
   <script src="script.js"></script>
